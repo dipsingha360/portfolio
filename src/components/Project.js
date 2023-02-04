@@ -19,7 +19,7 @@ const Project = ({ project }) => {
             <span key={i}>{tool}</span>
           ))}
         </span>
-        <div className="button flex flex-wrap gap-10">
+        <div className="buttons flex flex-wrap gap-10">
           <a
             href={project.liveLink}
             target="_blank"

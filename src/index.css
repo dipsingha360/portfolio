@@ -33,6 +33,11 @@ body {
   word-spacing: 3px;
 }
 
+input[type="submit"] {
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
 .app {
   position: relative;
 }
@@ -72,7 +77,8 @@ body {
 }
 
 .hero-img,
-.project-right {
+.project-right,
+.about-left {
   height: 500px;
   width: 500px;
   overflow: hidden;
