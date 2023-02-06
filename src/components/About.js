@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useHoverEffect } from "../hook/useHoverEffect";
 import SectionTitle from "./SectionTitle";
+import { useProjectSectionReveal } from "../hook/gsap";
 
 const data = {
   image1:
@@ -12,13 +13,17 @@ const data = {
 
 const About = () => {
   const aboutLeftRef = useRef(null);
+  const aboutRightRef = useRef(null);
+  const aboutRefs = [aboutLeftRef, aboutRightRef];
+
   useHoverEffect(aboutLeftRef, data.image1, data.image2);
+  useProjectSectionReveal(aboutRefs);
   return (
     <div className="about container mx-auto mt-40" id="about">
       <SectionTitle title={"About"} />
       <div className="about-wrapper mt-40 grid grid-cols-2 gap-20 overflow-hidden">
         <div className="about-left" ref={aboutLeftRef}></div>
-        <div className="about-right">
+        <div className="about-right" ref={aboutRightRef}>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Perspiciatis dignissimos ullam nulla officia voluptatibus totam quo
