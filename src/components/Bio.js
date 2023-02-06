@@ -1,7 +1,13 @@
+import { useRef } from "react";
+import { useBioReveal } from "../hook/gsap";
+
 const Bio = () => {
+  const bioRef = useRef(null);
+  useBioReveal(bioRef, 2);
+
   return (
     <div className="bio container mx-auto mt-20 overflow-hidden ">
-      <p>
+      <p ref={bioRef}>
         A front-end developer skilled in React builds dynamic web app
         interfaces. Proficiency in JavaScript and React is essential to create
         reusable components and manage state. Understanding React's virtual DOM,
