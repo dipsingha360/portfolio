@@ -118,29 +118,6 @@ export const useSectionTitleReveal = (el, delay = 0) => {
   }, [el, delay]);
 };
 
-// export const useProjectSectionReveal = (items, delay = 0) => {
-//   useEffect(() => {
-//     const el = items.map((item) => item.current);
-
-//     gsap.fromTo(
-//       el,
-//       {
-//         y: 500,
-//       },
-//       {
-//         y: 0,
-//         duration: 2,
-//         delay,
-//         ease: "power4.out",
-//         stagger: 0.3,
-//         scrollTrigger: {
-//           trigger: el.current,
-//         },
-//       }
-//     );
-//   }, [items, delay]);
-// };
-
 export const useProjectSectionReveal = (items, delay = 0) => {
   useEffect(() => {
     const el = items.map((item) => item.current);
