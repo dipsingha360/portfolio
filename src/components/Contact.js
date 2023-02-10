@@ -1,18 +1,37 @@
 import SectionTitle from "./SectionTitle";
 import { useContactReveal } from "../hook/gsap";
 import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const contactRef1 = useRef(null);
   const contactRef2 = useRef(null);
   const contactRef3 = useRef(null);
   const contactRef4 = useRef(null);
+  const formRef = useRef(null);
 
   const contactRefs = [contactRef1, contactRef2, contactRef3, contactRef4];
   useContactReveal(contactRefs);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    //emailjs intregration
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_ID
+      )
+      .then(
+        () => {
+          console.log("message sent");
+        },
+        () => {
+          console.log("Message not sent");
+        }
+      );
 
     //reset
     e.target.querySelector(".fullname").value = "";
@@ -24,7 +43,11 @@ const Contact = () => {
     <div className="container mx-auto mt-40" id="contact">
       <SectionTitle title={"Contact"} />
 
-      <form onSubmit={sendEmail} className="mt-40 grid grid-cols-2 gap-20">
+      <form
+        onSubmit={sendEmail}
+        className="mt-40 grid grid-cols-2 gap-20"
+        ref={formRef}
+      >
         <div className="form-control overflow-hidden">
           <input
             type="text"
@@ -63,8 +86,6 @@ const Contact = () => {
           <input
             type="submit"
             value="Send message"
-            name="email"
-            required
             className="uppercase bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none hover:bg-cyan-400/20 hover:border-cyan-400/20  duration-300 w-full"
             ref={contactRef4}
           />
