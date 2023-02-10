@@ -1,6 +1,16 @@
 import SectionTitle from "./SectionTitle";
+import { useContactReveal } from "../hook/gsap";
+import { useRef } from "react";
 
 const Contact = () => {
+  const contactRef1 = useRef(null);
+  const contactRef2 = useRef(null);
+  const contactRef3 = useRef(null);
+  const contactRef4 = useRef(null);
+
+  const contactRefs = [contactRef1, contactRef2, contactRef3, contactRef4];
+  useContactReveal(contactRefs);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -22,6 +32,7 @@ const Contact = () => {
             name="fullname"
             required
             className="fullname bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-300 w-full"
+            ref={contactRef1}
           />
         </div>
 
@@ -32,6 +43,7 @@ const Contact = () => {
             name="email"
             required
             className="email bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-300 w-full"
+            ref={contactRef2}
           />
         </div>
 
@@ -43,6 +55,7 @@ const Contact = () => {
             rows="1"
             cols="30"
             className="message bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-300 w-full resize-none"
+            ref={contactRef3}
           />
         </div>
 
@@ -53,6 +66,7 @@ const Contact = () => {
             name="email"
             required
             className="uppercase bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none hover:bg-cyan-400/20 hover:border-cyan-400/20  duration-300 w-full"
+            ref={contactRef4}
           />
         </div>
       </form>

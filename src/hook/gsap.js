@@ -176,3 +176,47 @@ export const useSkillTextReveal = (item, delay = 0) => {
     );
   }, [item, delay]);
 };
+
+export const useFooterReveal = (item, delay = 0) => {
+  useEffect(() => {
+    gsap.fromTo(
+      item.current,
+      {
+        y: -100,
+      },
+      {
+        y: 0,
+        duration: 1,
+        delay,
+        ease: "power4.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: item.current,
+        },
+      }
+    );
+  }, [item, delay]);
+};
+
+export const useContactReveal = (items, delay = 0) => {
+  useEffect(() => {
+    const el = items.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 100,
+      },
+      {
+        y: 0,
+        duration: 0.5,
+        delay,
+        ease: "power4.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, [items, delay]);
+};
