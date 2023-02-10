@@ -140,3 +140,39 @@ export const useProjectSectionReveal = (items, delay = 0) => {
     );
   }, [items, delay]);
 };
+
+export const useSkillLineReveal = (items, delay = 0) => {
+  useEffect(() => {
+    items.forEach((item) =>
+      gsap.to(item, {
+        scrollTrigger: {
+          trigger: item,
+          onEnter() {
+            item.classList.add("reveal");
+          },
+        },
+      })
+    );
+  }, [items, delay]);
+};
+
+export const useSkillTextReveal = (item, delay = 0) => {
+  useEffect(() => {
+    gsap.fromTo(
+      item,
+      {
+        y: 200,
+      },
+      {
+        y: 0,
+        duration: 1,
+        delay,
+        ease: "power4.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: item,
+        },
+      }
+    );
+  }, [item, delay]);
+};

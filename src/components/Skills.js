@@ -1,4 +1,6 @@
+import { useRef } from "react";
 import SectionTitle from "./SectionTitle";
+import { useSkillLineReveal, useSkillTextReveal } from "../hook/gsap";
 
 const data = [
   { id: 1, title: "HTML" },
@@ -16,6 +18,16 @@ const data = [
 ];
 
 const Skills = () => {
+  const skillItemLeftRef = useRef([]);
+  const skillItemRightRef = useRef([]);
+  const skillTextLeftRef = useRef([]);
+  const skillTextRightRef = useRef([]);
+
+  useSkillLineReveal(skillItemLeftRef.current);
+  useSkillLineReveal(skillItemRightRef.current);
+  useSkillTextReveal(skillTextLeftRef.current);
+  useSkillTextReveal(skillTextRightRef.current);
+
   return (
     <div className="skills container mx-auto mt-40" id="skills">
       <SectionTitle title={"Skills"} />
@@ -25,8 +37,15 @@ const Skills = () => {
           {data
             .filter((_, i) => i < Math.floor(data.length / 2))
             .map((skill, i) => (
-              <li key={skill.id} className="skill-item overflow-hidden">
-                <div className="flex gap-10 items-baseline">
+              <li
+                key={skill.id}
+                className="skill-item overflow-hidden"
+                ref={(el) => (skillItemLeftRef.current[i] = el)}
+              >
+                <div
+                  className="flex gap-10 items-baseline"
+                  ref={(el) => (skillTextLeftRef.current[i] = el)}
+                >
                   <span className="skill-number text-white/50">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
@@ -39,8 +58,15 @@ const Skills = () => {
           {data
             .filter((_, i) => i >= Math.floor(data.length / 2))
             .map((skill, i) => (
-              <li key={skill.id} className="skill-item overflow-hidden">
-                <div className="flex gap-10 items-baseline">
+              <li
+                key={skill.id}
+                className="skill-item overflow-hidden"
+                ref={(el) => (skillItemRightRef.current[i] = el)}
+              >
+                <div
+                  className="flex gap-10 items-baseline"
+                  ref={(el) => (skillTextRightRef.current[i] = el)}
+                >
                   <span className="skill-number text-white/50">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
