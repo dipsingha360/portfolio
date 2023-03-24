@@ -2,11 +2,15 @@ import { useRef } from "react";
 import { useSocialReveal } from "../hook/gsap";
 
 const data = [
-  { id: 1, title: "Facebook", url: "www.facebook.com/dipsingha360" },
-  { id: 2, title: "Twitter", url: "www.twitter.com/dipsingha360" },
-  { id: 3, title: "Github", url: "www.github.com/dipsingha360" },
-  { id: 4, title: "Linkedin", url: "www.linked.in.com/dipsingha360" },
-  { id: 5, title: "Leetcode", url: "www.leetcode.com/dipsingha360" },
+  { id: 1, title: "Facebook", url: "https://www.facebook.com/dipsingha360" },
+  { id: 2, title: "Twitter", url: "https://www.twitter.com/dipsingha360" },
+  { id: 3, title: "Github", url: "https://www.github.com/dipsingha360" },
+  {
+    id: 4,
+    title: "Linkedin",
+    url: "https://www.linkedin.com/in/dipsingha360/",
+  },
+  { id: 5, title: "Leetcode", url: "https://www.leetcode.com/dipsingha360" },
 ];
 
 const Socials = () => {

@@ -6,6 +6,7 @@ import { useProjectSectionReveal } from "../hook/gsap";
 const data = {
   image1: "https://i.postimg.cc/FHQjPnLJ/3.jpg",
   image2: "https://i.postimg.cc/x1yLByvp/2.jpg",
+  link: "https://docs.google.com/document/d/15v_O6hjLhzeaZB7oEH2zANW_ta2T0EWz4jRCuN7Muog/edit?usp=sharing",
 };
 
 const About = () => {
@@ -22,22 +23,21 @@ const About = () => {
         <div className="about-left" ref={aboutLeftRef}></div>
         <div className="about-right" ref={aboutRightRef}>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis dignissimos ullam nulla officia voluptatibus totam quo
-            minus! Eaque dignissimos, voluptate porro quibusdam repellendus
-            deleniti alias, culpa consequatur quidem, enim rem? Neque non
-            numquam aliquid itaque, repudiandae maiores eligendi! Amet dolore
-            voluptas mollitia quisquam quibusdam nam numquam tempora possimus
-            deleniti, soluta libero corrupti sit deserunt voluptatum recusandae
-            architecto distinctio provident ratione sequi magnam laborum ea
-            eligendi ad. Assumenda, fugiat! Minima, enim.
+            As a React developer, I have strong skills in JavaScript, React,
+            Redux and Tailwind. I can tackle complex challenges with data
+            structures and algorithms. I am a fast learner who can build web
+            applications that are responsive and user-friendly. I also know how
+            to work well with other developers and lead projects from start to
+            finish.
           </p>
           <p className="mt-10">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis dignissimos ullam nulla officia voluptatibus totam quo
-            minus! Eaque dignissimos, voluptate porro quibusdam repellendus
-            deleniti alias, culpa consequatur quidem, enim rem? Neque non
-            numquam aliquid itaque, repudiandae maiores eligendi!
+            My passion for web development began with my fascination with the
+            power of JavaScript and its potential to create dynamic and
+            interactive web applications. As I honed my skills in this language,
+            I discovered the power of React and how it simplifies the process of
+            building complex user interfaces. I have since become proficient in
+            using Redux to manage application state and Tailwind to create
+            beautiful and responsive designs.
           </p>
           <a
             href={data.link}
