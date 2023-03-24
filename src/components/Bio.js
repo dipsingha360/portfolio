@@ -8,12 +8,12 @@ const Bio = () => {
   return (
     <div className="bio container mx-auto mt-20 overflow-hidden ">
       <p ref={bioRef}>
-        A front-end developer skilled in React builds dynamic web app
-        interfaces. Proficiency in JavaScript and React is essential to create
-        reusable components and manage state. Understanding React's virtual DOM,
-        lifecycle methods, and hooks is key. Consider this field if you have a
-        passion for functional and visually appealing web experiences using
-        React.
+        React Developer proficient in creating dynamic and responsive web
+        applications using JavaScript, React, Redux and Tailwind. Skilled in
+        solving problems with data structures and algorithms and learning new
+        technologies. Collaborated with other developers and led projects from
+        idea to launch. Passionate about delivering high-quality user
+        experiences and exceeding client expectations.
       </p>
     </div>
   );

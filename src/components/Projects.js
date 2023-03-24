@@ -4,44 +4,26 @@ import SectionTitle from "./SectionTitle";
 const data = [
   {
     id: 1,
-    title: "TORQUE XTREME — A CAR REPAIR SERVICE",
-    image1:
-      "https://res.cloudinary.com/dpkbthpcw/image/upload/v1675265034/Personal%20Portfolio%202/torque-2_fawp9c.png",
-    image2:
-      "https://res.cloudinary.com/dpkbthpcw/image/upload/v1675265033/Personal%20Portfolio%202/torque-1_hqxafc.jpg",
+    title: "Proxima - Project management web application (2023)",
+    image1: "https://i.postimg.cc/3NHdwcmH/project1-1.jpg",
+    image2: "https://i.postimg.cc/VNpJx6Nv/project1-2.jpg",
     description:
-      "Users can register and login through email/password, google or github account. Users can make order for a specific car repair service as well as add/edit services. User authorization has been implemented using JWT on the server side",
-    tools: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "React.js",
-      "Firebase",
-      "Tailwind CSS",
-    ],
-    liveLink: "https://www.google.com",
-    frontEndLink: "https://www.google.com",
-    // backEndLink: "https://www.google.com",
+      "This ReactJS-based project management app is built with modern tech like React Router, TailwindCSS, Express, MongoDB, and Mongoose. It's user-friendly, allowing businesses and individuals to easily manage projects online. Features include project creation, editing, and deletion, with each user having their own account for independent management.",
+    tools: ["React.js", "Tailwind CSS", "Express.js", "MongoDB", "JWT"],
+    liveLink: "https://proxima-ds.netlify.app",
+    frontEndLink: "https://github.com/dipsingha360/proxima-client",
+    backEndLink: "https://github.com/dipsingha360/proxima-server",
   },
   {
     id: 2,
-    title: "REACT SHOPPING — AN ELECTRONICS STORE",
-    image1:
-      "https://images.pexels.com/photos/5404149/pexels-photo-5404149.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    image2:
-      "https://images.pexels.com/photos/4167169/pexels-photo-4167169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Tech Alpha — Ecommerce website",
+    image1: "https://i.postimg.cc/C5Hdnssn/project2-1.jpg",
+    image2: "https://i.postimg.cc/cH3v0SKm/project2-2.jpg",
     description:
-      "Shopping cart functionality has been implemented using Redux Toolkit. All the product data has been served via JSON server and fetched using RTK Query. Cart items also saved into the local storage of the client’s browser",
-    tools: [
-      "React.js",
-      "Redux.js",
-      "Redux Toolkit",
-      "RTK Query",
-      "Tailwind CSS",
-    ],
-    liveLink: "https://www.google.com",
-    frontEndLink: "https://www.google.com",
+      "Tech alpha is an open-source e-commerce project built to provide a seamless online shopping experience for technology enthusiasts. The website offers a wide range of technology products. The platform enables customers to purchase products securely and conveniently, with a streamlined checkout process that supports various payment methods.",
+    tools: ["React.js", "React Redux", "React Router", "Tailwind CSS"],
+    liveLink: "https://techalpha.netlify.app/",
+    frontEndLink: "https://github.com/dipsingha360/tech-alpha",
   },
 ];
 

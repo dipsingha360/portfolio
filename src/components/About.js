@@ -4,11 +4,8 @@ import SectionTitle from "./SectionTitle";
 import { useProjectSectionReveal } from "../hook/gsap";
 
 const data = {
-  image1:
-    "https://images.pexels.com/photos/14807470/pexels-photo-14807470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  image2:
-    "https://images.pexels.com/photos/15422042/pexels-photo-15422042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  link: "https://www.google.com",
+  image1: "https://i.postimg.cc/FHQjPnLJ/3.jpg",
+  image2: "https://i.postimg.cc/x1yLByvp/2.jpg",
 };
 
 const About = () => {
